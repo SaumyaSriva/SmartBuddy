@@ -1,0 +1,116 @@
+{
+  "users": [
+    {
+      "name": "Himanshu Mehta",
+      "empId": "46271648",
+      "email": "Supervisor@smartbuddy.com",
+      "password": "Smart@2309",
+      "role": "Supervisor",
+      "id": 1
+    },
+    {
+      "name": "Himanshu Mehta",
+      "empId": "123456",
+      "email": "himansme2@gmail.com",
+      "password": "Hima@2309",
+      "primarySkill": "as",
+      "secondarySkill": "as",
+      "preferredRole": "Technical",
+      "role": "Resource",
+      "id": 2
+    },
+    {
+      "name": "Saumya Srivastava",
+      "empId": "46271505",
+      "email": "saumya.srivastava@capgemini.com",
+      "password": "saumya@123",
+      "primarySkill": "Java",
+      "secondarySkill": "SpringBoot",
+      "preferredRole": "Technical",
+      "role": "Resource",
+      "id": 3
+    },
+    {
+      "name": "Jasmin Mishra",
+      "empId": "280400",
+      "email": "jasmin.mishra@gmail.com",
+      "password": "dona2804",
+      "primarySkill": "Java",
+      "secondarySkill": "Angular",
+      "preferredRole": "Technical",
+      "role": "Supervisor",
+      "id": 4
+    },
+    {
+      "name": "Himanshu Mehta",
+      "empId": "999999",
+      "email": "Employee@smartbuddy.com",
+      "password": "Smart@2309",
+      "primarySkill": "Java",
+      "secondarySkill": "Angular",
+      "preferredRole": "Technical",
+      "role": "Resource",
+      "id": 5
+    }
+  ],
+  "jds": [
+    {
+      "id": 2,
+      "Title": "Java Developer",
+      "Domain": "Java, Spring, SpringBoot",
+      "Account": "dongler",
+      "Description": "Good knowledge in Java, Java 8 , Streams, spring springboot and cloud"
+    },
+    {
+      "id": 3,
+      "Title": "Java Developer",
+      "Domain": "Java, Spring, SpringBoot",
+      "Account": "MBRDI",
+      "Description": "Good knowledge in Java, Java 8 , Streams, spring springboot and cloud"
+    },
+    {
+      "Title": "Test",
+      "Account": "test",
+      "Domain": "test",
+      "Description": "test",
+      "id": 4
+    },
+    {
+      "Title": "Stellar",
+      "Account": "Mercedes",
+      "Domain": "Angular",
+      "Description": "2yrs Exp in Angular",
+      "id": 5
+    },
+    {
+      "Title": "TestJD",
+      "Account": "TestJD",
+      "Domain": "TESTJD",
+      "Description": "TESTJD",
+      "id": 6
+    }
+  ],
+  "nomination": [
+    {
+      "user": {
+        "name": "Himanshu Mehta",
+        "empId": "999999",
+        "email": "Employee@smartbuddy.com",
+        "password": "Hima@2309",
+        "primarySkill": "Java",
+        "secondarySkill": "Angular",
+        "preferredRole": "Technical",
+        "role": "Resource",
+        "id": 5
+      },
+      "jd": {
+        "Title": "TestJD",
+        "Account": "TestJD",
+        "Domain": "TESTJD",
+        "Description": "TESTJD",
+        "id": 6
+      },
+      "id": 1
+    }
+  ]
+}

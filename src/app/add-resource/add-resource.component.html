@@ -1,0 +1,88 @@
+<div class="full">
+    <div class="fst header">
+      <label id="appname"><img src="smart-logo.png"></label>
+      <label id="pgname" style=" font-size: 25px;"><Strong>Supervisor</Strong></label>
+      <button id="logoutbtn"  mat-raised-button style="margin-right: 1cm;" (click)="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <div class="left">
+      <div class="table">
+        <div class="heading">
+          <h1>Add Resource</h1>
+        </div>
+        <form [formGroup]="formData" (ngSubmit)="submitForm()">
+            <div>
+              <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Name:</mat-label>
+                  <input matInput type="text" formControlName="name" required>
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Employee ID:</mat-label>
+                  <input matInput type="text" formControlName="empId" required>
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Email:</mat-label>
+                  <input matInput type="email" formControlName="email" required>
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Password:</mat-label>
+                  <input matInput type="password" formControlName="password" required>
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Primary Skill:</mat-label>
+                  <input matInput type="text" formControlName="primarySkill" required>
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Secondary Skill:</mat-label>
+                  <input matInput type="text" formControlName="secondarySkill" required>
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Preferred Role:</mat-label>
+                  <mat-select formControlName="preferredRole" required>
+                    <mat-option value="Technical">Technical</mat-option>
+                    <mat-option value="Non-Technical">Non-Technical</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <button mat-raised-button color="primary" class="Button1" type="submit">Submit</button>
+            </div>
+          </form>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="button-container">
+        <button mat-raised-button class="button" (click)="home()" color="primary">
+          Home
+        </button>
+        <button mat-raised-button class="button" (click)="addjds()"  color="primary">
+          Add JDS
+        </button>
+        <button mat-raised-button class="button" (click)="viewRes()" color="primary">
+          View All Resources
+        </button>
+        <button mat-raised-button class="button" (click)="removeResource()" color="primary">
+          Remove Resources
+        </button>
+        <button mat-raised-button class="button" (click)="viewNomination()" color="primary">
+          View Nominations
+        </button>
+      </div>
+    </div>
+
+  </div>

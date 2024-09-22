@@ -1,0 +1,63 @@
+      <body>
+        <div class="full">
+          <div class="fst">
+            <label id="appname"><img src="smart-logo.png" ></label>
+          <label id="pgname" style=" font-size: 25px;"><Strong>JOB DESCRIPTION</Strong></label>
+          <button id="logoutbtn" (click)="logout()" mat-raised-button style="margin-right: 1cm;" >Logout</button>
+          </div>
+          <div class="second">
+            <div class="left">
+              <button class="quarter top-right" mat-raised-button color="primary" id="left-btn1" (click)="jobDesc()"><strong>JD</strong></button>
+              <button class="quarter bottom-right" mat-raised-button color = "primary"id="left-btn2" (click)="empdash()"><strong>Dashboard</strong></button>
+            </div>
+            <!-- <mat-form-field class="filter">
+              <mat-label>Filter</mat-label>
+              <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+            </mat-form-field> -->
+            <div class="right">
+      <table mat-table [dataSource]="dataSource" multiTemplateDataRows
+             class="mat-elevation-z8">
+             <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
+              <th mat-header-cell *matHeaderCellDef style="background-color: #54C1AC; width: 35rem;"> {{column}} </th>
+              <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+            </ng-container>
+
+        <ng-container matColumnDef="expand">
+          <th mat-header-cell *matHeaderCellDef aria-label="row actions" style="background-color: #54C1AC">&nbsp;</th>
+          <td mat-cell *matCellDef="let element" style="display: flex;">
+            
+            <button mat-icon-button style="margin-right: 5rem; margin-top: 0.2rem" aria-label="expand row" (click)="(expandedElement = expandedElement === element ? null : element); $event.stopPropagation()">
+              <mat-icon *ngIf="expandedElement !== element">keyboard_arrow_down</mat-icon>
+              <mat-icon *ngIf="expandedElement === element">keyboard_arrow_up</mat-icon>
+            </button>
+            <button mat-raised-button color="primary" style="margin-top: 0.5rem; cursor: pointer;" (click)="applyNomination(element.id)">Apply</button>
+          </td>
+        </ng-container>
+      
+        <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+        <ng-container matColumnDef="expandedDetail">
+          <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplayWithExpand.length">
+            <div class="example-element-detail"
+                 [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+              <div class="example-element-diagram">
+                <div class="example-element-symbol"> {{element.Title}} </div>
+                <div class="example-element-name"> {{element.Description}} </div>             
+              </div>
+            </div>
+            <!-- <div><button>Apply Now</button></div> -->
+          </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplayWithExpand"></tr>
+        <tr mat-row *matRowDef="let element; columns: columnsToDisplayWithExpand;"
+            class="example-element-row"
+            [class.example-expanded-row]="expandedElement === element"
+            (click)="expandedElement = expandedElement === element ? null : element">
+        </tr>
+        <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+      </table>
+            </div>
+          </div>
+        </div>
+      </body>
+      

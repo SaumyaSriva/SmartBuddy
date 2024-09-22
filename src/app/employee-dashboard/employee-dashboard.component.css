@@ -1,0 +1,116 @@
+form {
+    max-width: 80%;
+    margin: auto auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+  }
+
+
+
+  mat-form-field {
+    width: 45%;
+    /* margin-bottom: 10px; */
+    /* margin-right: 5px; */
+    /* margin: auto; */
+    margin-left: 3.33%;
+
+  }
+
+
+
+  .button1 {
+    margin-left: 3.33%;
+    margin-top: 20px;
+    width: 400px;
+    width: 44.9%;
+    /* margin-right: 5px; */
+    /* margin-bottom: 15%; */
+  }
+  h2{
+    text-align: center;
+  }
+
+  .form-icon {
+    font-size: 30px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .fst {
+    background-color: #54C1AC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2cm;
+  }
+
+
+
+
+  .appname{
+    background-image: url('src/app/job-description/smart-logo.png');
+    margin-left: 5cm;
+    /* src: url('src/app/job-description/smart-logo.png'); */
+  }
+  .left {
+    /* background-color: white; */
+    width: 20%;
+    /* margin-top: 3cm; */
+    display: flex;
+    flex-direction: column;
+    /* float: left; */
+    justify-content: center;
+    /* align-items: flex-start; */
+  }
+
+  .right {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+
+  }
+  .full {
+    /* margin: 0; */
+    display: flex;
+  }
+
+
+
+  .quarter {
+    width: 50%;
+    height: 20vh;
+    padding: 0%;
+    margin: 0%;
+    /* justify-content: center; */
+    /* height: 120px; */
+  }
+
+  .top-right {
+    border-top-right-radius: 210px;
+    float: right;
+
+  }
+  .bottom-right {
+    border-bottom-right-radius: 210px;
+    float: right;
+  }
+  #left-btn1,
+  #left-btn2 {
+    margin-right: auto;
+    font-size: large;
+  }
+
+  .edit-button{
+    width: 45%;
+
+    /* float: right; */
+    /* margin-bottom: 15px; */
+  }
+

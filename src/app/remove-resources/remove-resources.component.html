@@ -1,0 +1,107 @@
+<!--
+  <div class="full">
+    <div class="fst header">
+      <label id="appname"><img src="smart-logo.png"></label>
+      <label id="pgname" style=" font-size: 25px;"><Strong>Supervisor</Strong></label>
+      <button id="logoutbtn" (click)="logout()" mat-raised-button style="margin-right: 1cm;">Logout</button>
+    </div>
+  </div>
+
+<div class="body">
+
+
+<div class="left">
+  <div class="heading">
+  <h1>Remove Resources</h1>
+</div>
+  <p>Enter Employee Id:</p>
+    <mat-form-field class="anything">
+
+    <mat-label>Enter Employee Id:</mat-label>
+    <input  style="margin-left: 2cm;" #yourInput matInput name="id" formControlName="id" required><br>
+    </mat-form-field>
+    <button color="primary" style= "width: 10cm;   font-family: ROBOTO;
+    color: aliceblue;" mat-raised-button class="button" (click)="del(yourInput.value)">Remove</button>
+  </div>
+
+<div class="right">
+  <div style="margin-left: 3cm; margin-top: 2cm;">
+  <button color="primary" style= "width: 10cm; height: 1.3cm; margin-bottom: 0.6cm;   font-family: ROBOTO;
+  color: aliceblue;" mat-raised-button class="button" (click)="home()">JDS</button><br>
+  <button color="primary" style= "width: 10cm; height: 1.3cm; margin-bottom: 0.6cm;   font-family: ROBOTO;
+  color: aliceblue;" mat-raised-button class="button" (click)="addResources()">Add Resources</button>
+  <button color="primary" style= "width: 10cm; height: 1.3cm; margin-bottom: 0.6cm;   font-family: ROBOTO;
+  color: aliceblue;" mat-raised-button class="button" (click)="viewResources()">View All Resources</button>
+  <button color="primary" style= "width: 10cm; height: 1.3cm; margin-bottom: 0.6cm;   font-family: ROBOTO;
+  color: aliceblue;" mat-raised-button class="button" (click)="addjds()">Add JDS</button>
+
+</div>
+</div>
+
+</div>
+ -->
+
+ <div class="full">
+  <div class="fst header">
+    <label id="appname"><img src="smart-logo.png"></label>
+    <label id="pgname" style=" font-size: 25px;"><Strong>Supervisor</Strong></label>
+    <button id="logoutbtn"  mat-raised-button style="margin-right: 1cm;" (click)="logout()">Logout</button>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="left">
+    <div class="table">
+      <div class="heading">
+        <h1>Remove Resource</h1>
+      </div>
+    <mat-form-field class="anything">
+      <mat-label>Employee Id:</mat-label>
+      <input #yourInput matInput name="id" formControlName="id" required><br>
+    </mat-form-field>
+    <button color="primary" style= "width: 10cm; font-family: ROBOTO;" mat-raised-button class="button" (click)="del(yourInput.value)">Remove</button>
+  </div>
+  </div>
+
+
+<!-- <div class="grid-container">
+  <div class="left">
+    <div class="heading">
+      <h1>Remove Resource</h1>
+
+        <p>Enter Employee Id:</p>
+    <mat-form-field class="anything">
+
+    <mat-label>Enter Employee Id:</mat-label>
+    <input  style="margin-left: 2cm;" #yourInput matInput name="id" formControlName="id" required><br>
+    </mat-form-field>
+    <button color="primary" style= "width: 10cm;   font-family: ROBOTO;
+    color: aliceblue;" mat-raised-button class="button" (click)="del(yourInput.value)">Remove</button>
+  </div>
+  </div> -->
+
+
+
+  <div class="right">
+    <div class="button-container">
+      <button mat-raised-button class="button" (click)="jds()" color="primary">
+        Home
+      </button>
+      <button mat-raised-button class="button" (click)="addjds()"  color="primary">
+        Add JDS
+      </button>
+      <button mat-raised-button class="button" (click)="viewResources()" color="primary">
+        View All Resources
+      </button>
+      <button mat-raised-button class="button" (click)="addResource()" color="primary">
+        Add Resources
+      </button>
+
+      <button mat-raised-button class="button" (click)="viewNomination()" color="primary">
+        View Nominations
+      </button>
+    </div>
+  </div>
+
+
+

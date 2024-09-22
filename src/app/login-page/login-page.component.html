@@ -1,0 +1,83 @@
+<div class="full">
+   <div class="left">
+      <form class="my-form" [formGroup]="myForm">
+         <mat-card class="my-card">
+            <mat-card-content class="card-content">
+                  <mat-form-field class="full-width">
+                     <mat-label>Email</mat-label>
+                     <input  matInput  placeholder="Email" name="email"  [(ngModel)]="email" formControlName="email" required>
+                     <mat-error *ngIf="myForm.get('email')?.hasError('required')">email is required</mat-error>
+                  </mat-form-field>
+               <br>
+                  <mat-form-field class="full-width">
+                     <mat-label>Password</mat-label>
+                     <input matInput [type]="hide ? 'password' : 'text'" placeholder="password" name="password" [(ngModel)]="password" formControlName="password" required>
+                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                     <mat-icon class="icon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon><br>
+                     </button>
+                  </mat-form-field>
+                  <mat-form-field class="full-width">
+                     <mat-select [(value)]="selected">
+                       <mat-option value="Supervisor">Supervisor</mat-option>
+                       <mat-option value="Resource">Employee</mat-option>
+                     </mat-select>
+                   </mat-form-field>
+           </mat-card-content>
+            <mat-card-actions>
+               <button class="button1" mat-raised-button (click)="checkLogin()" [disabled]="myForm.invalid" color="primary">LOGIN</button>
+            </mat-card-actions>
+         </mat-card>
+         <p class="p">or</p>
+         <p style="padding-left: 3cm;"><Strong> New User? </Strong><a href="/register"> Register here</a></p>
+      </form>
+   </div>
+   <div class="right">
+     <div class="welcome-container">
+       <h1>Hello Buddy!!</h1>
+       <h2>Enter your information <br>and get started with your project hunt</h2>
+     </div>
+   </div>
+ </div>
+
+
+<!-- <body>
+    <div class="Hello">
+       <h1><Strong>Hello Buddy !!</Strong></h1>
+       <br>
+       <h2>Enter your information <br>and get started with your project hunt</h2>
+    </div>
+    <div class="Login-div">
+    </div>
+    <form class="my-form" [formGroup]="myForm">
+          <mat-card class="my-card">
+             <mat-card-content class="card-content">
+                   <mat-form-field class="full-width">
+                      <mat-label>Email</mat-label>
+                      <input  matInput  placeholder="Email" name="email"  [(ngModel)]="email" formControlName="email" required>
+                      <mat-error *ngIf="myForm.get('email')?.hasError('required')">email is required</mat-error>
+                   </mat-form-field>
+
+                <br>
+                   <mat-form-field class="full-width">
+                      <mat-label>Password</mat-label>
+                      <input matInput [type]="hide ? 'password' : 'text'" placeholder="password" name="password" [(ngModel)]="password" formControlName="password" required>
+                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon class="icon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon><br>
+
+                      </button>
+                   </mat-form-field>
+                  <mat-form-field class="full-width">
+                     <mat-select [(value)]="selected">
+                       <mat-option value="Supervisor">Supervisor</mat-option>
+                       <mat-option value="Resource">Employee</mat-option>
+                     </mat-select>
+                   </mat-form-field>
+            </mat-card-content>
+             <mat-card-actions>
+                <button class="button1" mat-raised-button (click)="checkLogin()" [disabled]="myForm.invalid" color="primary">LOGIN</button>
+             </mat-card-actions>
+          </mat-card>
+          <p class="p">____________________________or____________________________</p>
+          <p style="padding-left: 3cm;"><Strong> New User?</Strong><a href="/register"> Register here</a></p>
+       </form>
+</body> -->

@@ -1,0 +1,111 @@
+.fst {
+    background-color: #54C1AC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2cm;
+  }
+  table {
+    width: 100%;
+  }
+  
+  tr.example-detail-row {
+    height: 0;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: whitesmoke;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+  
+  .example-element-row td {
+    border-bottom-width: 0;
+  }
+  
+  .example-element-detail {
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .example-element-diagram {
+    min-width: 80px;
+    border: 2px solid black;
+    padding: 8px;
+    font-weight: lighter;
+    margin: 8px 0;
+    height: 104px;
+  }
+  
+  .example-element-symbol {
+    padding-bottom: 1rem;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: normal;
+  }
+  
+  .example-element-description {
+    padding: 16px;
+  }
+  
+  .example-element-description-attribution {
+    opacity: 0.5;
+  }
+
+  .mat-elevation-z8{
+    width: 10cm;
+    margin-left: 2rem;
+    margin-right: 6rem;
+  }
+  .appname{
+    background-image: url('src/app/job-description/smart-logo.png');
+    margin-left: 5cm;
+    /* src: url('src/app/job-description/smart-logo.png'); */
+  }
+  .left {
+    background-color: white;
+    width: 25%;
+    margin-top: 3cm;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-right: -5rem;
+  }
+  
+  .right {
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 450px;
+    left:1%;
+  }
+  .full {
+    margin: 0;
+  }
+  .quarter {
+    width: 40%;
+    height: 120px;
+    /* justify-content: center; */
+  }
+  
+  .top-right {
+    border-top-right-radius: 210px;
+    float: right;
+
+  }
+  .bottom-right {
+    border-bottom-right-radius: 210px;
+    float: right;
+  }
+  #left-btn1,
+  #left-btn2 {
+    margin-right: auto;
+    font-size: large;
+  }
+
+  
+  
+  

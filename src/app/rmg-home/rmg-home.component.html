@@ -1,0 +1,78 @@
+<div class="full">
+  <div class="fst header">
+    <label id="appname"><img src="smart-logo.png"></label>
+    <label id="pgname" style=" font-size: 25px;"><Strong>Supervisor</Strong></label>
+    <button id="logoutbtn" (click)="logout()" mat-raised-button style="margin-right: 1cm;">Logout</button>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="left">
+    <div class="table">
+      <div class="heading">
+        <h1>JOB DESCRIPTION</h1>
+      </div>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="JID">
+          <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Job ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} <i class="bi bi-eye-fill"></i>          </td>
+          </ng-container>
+        <ng-container matColumnDef="Title">
+          <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Title </th>
+          <td mat-cell *matCellDef="let element"> {{element.Title}} <i class="bi bi-eye-fill"></i>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="Account">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Account </th>
+        <td mat-cell *matCellDef="let element"> {{element.Account}} <i class="bi bi-eye-fill"></i>
+
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="Domain">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Domain </th>
+          <td mat-cell *matCellDef="let element"> {{element.Domain}} <i class="bi bi-eye-fill"></i>
+
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="Description">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Description </th>
+          <td mat-cell *matCellDef="let element"> {{element.Description}} <i class="bi bi-eye-fill"></i>          </td>
+        </ng-container>
+        <ng-container matColumnDef="icos">
+          <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Action </th>
+          <td mat-cell *matCellDef="let element">
+            <div class="icon-container">
+              <i class="bi bi-eye-fill"></i>
+              <i class="bi bi-archive-fill"></i>
+              <mat-icon style="cursor: pointer;" (click)="del(element.id)">delete</mat-icon>
+            </div>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="button-container">
+      <button mat-raised-button class="button" (click)="addJDS()" color="primary">
+        Add JDS
+      </button>
+      <button mat-raised-button class="button" (click)="addResources()" color="primary">
+        Add Resources
+      </button>
+      <button mat-raised-button class="button" (click)="viewRes()" color="primary">
+        View All Resources
+      </button>
+      <button mat-raised-button class="button" (click)="removeResource()" color="primary">
+        Remove Resources
+      </button>
+      <button mat-raised-button class="button" (click)="viewNomination()" color="primary">
+        View Nominations
+      </button>
+    </div>
+  </div>
+
+</div>

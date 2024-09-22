@@ -1,0 +1,75 @@
+<body>
+<div>
+  <div class="fst">
+    <label id="appname"><img src="smart-logo.png" ></label>
+  <label id="pgname" style=" font-size: 25px;"><Strong>Employee Dashboard</Strong></label>
+  <button id="logoutbtn" mat-raised-button (click)="logout()" style="margin-right: 1cm;" >Logout</button>
+  </div>
+  <div class="full">
+
+      <div class="left">
+        <button class="quarter top-right" mat-raised-button color="primary" id="left-btn1" (click)="jobDesc()"><strong>JD</strong></button>
+        <button class="quarter bottom-right" mat-raised-button color = "primary"id="left-btn2" (click)="empdash()"><strong>Dashboard</strong></button>
+      </div>
+      <div class="right">
+        <form [class.edit-mode]="isEditMode">
+          <div class="form-header">
+            <mat-icon class="form-icon">person</mat-icon>
+            <h2>My Details</h2>
+            <!-- <button mat-raised-button color="primary" class="edit-button" (click)="toggleEditMode()" style="width: max-content;float: right;margin-bottom: 15px;">
+              <mat-label>{{ isEditMode ? 'Save' : 'Edit' }}</mat-label>
+            </button> -->
+          </div>
+        
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput [readonly]="!isEditMode" placeholder="Enter your name" name="name" [(ngModel)]="name">
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Employee ID</mat-label>
+            <input matInput [readonly]="!isEditMode" placeholder="Enter your employee ID" name="empId" [(ngModel)]="empId">
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Email ID</mat-label>
+            <input matInput [readonly]="!isEditMode" type="email" placeholder="Enter your email address" name="emailId" [(ngModel)]="emailId">
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput [readonly]="!isEditMode" type="text" placeholder="Enter your password" name="password" [(ngModel)]="password">
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Role</mat-label>
+            <input matInput [readonly]=true placeholder="Enter your role" name="role" [(ngModel)]="role">
+          </mat-form-field>
+          
+          <mat-form-field>
+            <mat-label>Primary Skill</mat-label>
+            <input matInput [readonly]="!isEditMode" placeholder="Enter your primary skill" name="primarySkill" [(ngModel)]="primarySkill">
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Secondary Skill</mat-label>
+            <input matInput [readonly]="!isEditMode" placeholder="Enter your secondary skill" name="secondarySkill" [(ngModel)]="secondarySkill">
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Preferred Role</mat-label>
+            <mat-select [disabled]="!isEditMode" placeholder="Select your preferred role" name="preferredRole" [(ngModel)]="preferredRole">
+              <mat-option value="Technical">Technical</mat-option>
+              <mat-option value="Non-Technical">Non-Technical</mat-option>
+            </mat-select>
+          </mat-form-field>
+        
+          <button mat-raised-button color="primary" type="submit" class="button1" (click)="submitForm()" [disabled]="!isEditMode">Submit</button>
+          <button mat-raised-button color="primary" class="edit-button button1" (click)="toggleEditMode()">
+            <mat-label>{{ isEditMode ? 'Save Draft' : 'Edit' }}</mat-label>
+          </button>
+        </form>
+    </div>
+  </div>
+</div>
+</body>

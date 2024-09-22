@@ -1,0 +1,72 @@
+<div class="full">
+  <div class="fst header">
+    <label id="appname"><img src="smart-logo.png"></label>
+    <label id="pgname" style=" font-size: 25px;"><Strong>Supervisor</Strong></label>
+    <button id="logoutbtn" (click)="logout()" mat-raised-button style="margin-right: 1cm;">Logout</button>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="left">
+    <div class="table">
+      <div class="heading">
+        <h1>Add JD</h1>
+      </div>
+      <form [class.edit-mode]="isEditMode" [formGroup]="formData" (ngSubmit)="submitForm()">
+        <mat-form-field class="anything">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="Title" [disabled]="!isEditMode" required>
+        </mat-form-field>
+
+        <mat-form-field class="anything">
+          <mat-label>Account</mat-label>
+          <input matInput formControlName="Account" [disabled]="!isEditMode" required>
+        </mat-form-field>
+
+        <mat-form-field class="anything">
+          <mat-label>Domain</mat-label>
+          <input matInput formControlName="Domain" [disabled]="!isEditMode" required>
+        </mat-form-field>
+
+        <mat-form-field class="anything">
+          <mat-label>Description</mat-label>
+          <input matInput formControlName="Description" [disabled]="!isEditMode" required>
+        </mat-form-field>
+
+        <div class="button-container2">
+          <button mat-raised-button class="button edit-button button1" color="primary">
+            Publish JD
+          </button>
+
+          <!-- <button mat-raised-button color="primary" class="edit-button button" (click)="toggleEditMode()">
+            <mat-label>{{ isEditMode ? 'Save Draft' : 'Edit' }}</mat-label>
+          </button> -->
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="button-container">
+      <button mat-raised-button class="button" (click)="home()" color="primary">
+        Home
+      </button>
+      <button mat-raised-button class="button" (click)="addResources()" color="primary">
+        Add Resources
+      </button>
+      <button mat-raised-button class="button" (click)="viewResources()" color="primary">
+        View All Resources
+      </button>
+      <button mat-raised-button class="button" (click)="removeResource()" color="primary">
+        Remove Resources
+      </button>
+      <button mat-raised-button class="button" (click)="viewNomination()" color="primary">
+        View Nominations
+      </button>
+    </div>
+  </div>
+
+</div>
+
+
+

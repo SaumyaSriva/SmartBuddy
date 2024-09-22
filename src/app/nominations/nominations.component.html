@@ -1,0 +1,86 @@
+<body>
+    <div class="full2">
+      <div class="fst header">
+        <label id="appname"><img src="smart-logo.png"></label>
+        <label id="pgname" style=" font-size: 25px;"><Strong>Supervisor</Strong></label>
+        <button id="logoutbtn" (click)="logout()" mat-raised-button style="margin-right: 1cm;">Logout</button>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="left">
+        <div class="table">
+          <div class="heading">
+            <h1>Nominations</h1>
+          </div>
+
+          <!-- <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+          </mat-form-field> -->
+
+          <div class="search">
+          <input type="text" [(ngModel)]="inputValue" placeholder="Enter Account Name">
+          <button class="button" mat-raised-button (click)="onButtonClick()">Submit</button>
+          </div>
+
+          <mat-table [dataSource]="tableData">
+
+
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.user.name }}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="empId">
+              <mat-header-cell *matHeaderCellDef>Employee ID</mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.user.empId }}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="email">
+              <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.user.email }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="primarySkill">
+              <mat-header-cell *matHeaderCellDef>Primary Skill</mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.user.primarySkill }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="secondarySkill">
+              <mat-header-cell *matHeaderCellDef>Secondary Skill</mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.user.secondarySkill }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="Account">
+              <mat-header-cell *matHeaderCellDef>Account Nominated</mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.jd.Account}}</mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="['name', 'empId', 'email', 'primarySkill', 'secondarySkill','Account']"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: ['name', 'empId', 'email', 'primarySkill', 'secondarySkill','Account']"></mat-row>
+          </mat-table>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="button-container">
+          <button mat-raised-button class="button" (click)="home()" color="primary">
+            Home
+          </button>
+          <button mat-raised-button class="button" (click)="jds()" color="primary">
+            View JDS
+          </button>
+          <button mat-raised-button class="button" (click)="addres()"color="primary">
+            Add Resources
+          </button>
+          <button mat-raised-button class="button" (click)="addjds()" color="primary">
+            Add JD
+          </button>
+          <button mat-raised-button class="button" (click)="removeResource()" color="primary">
+            Remove Resources
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+
+

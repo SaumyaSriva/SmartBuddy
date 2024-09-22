@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+.right{
+    background-image: url("src\app\login-page\loginbg2.png");
+    background-size:cover;
+    background-size:100%; 
+}
+
+.p{
+    /* padding-left: 6px; */
+    font-weight: lighter;
+    text-align: center;
+}
+.login{
+    /* padding-top: 3.5cm; */
+    font-family:'Raleway';
+    font-weight: 700px;
+    font-size:xx-large;
+    color: #3ab19b;
+}
+/* .Login-div{
+    position:relative;
+    padding-left: 2cm;
+    padding-bottom: 2cm;
+} */
+.matcard{
+    background-color: aliceblue;
+}
+.container{
+    background-color: aliceblue;
+    font-family: 'Raleway';
+}
+.my-form{
+    margin: 0 auto;
+    min-width: 100px;
+    max-width: 410px;
+    width: 100%;
+
+  }
+  .my-card{
+    border-radius: 0.5cm;
+    background-color: white;
+  } 
+  .left{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .right{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .full{
+    display: flex;
+  }
+
+  .full-width{
+    width: 10cm;
+  }
+  .button1{
+    background-color: #3ab19b;
+    color:#fff;
+    margin: 0 auto;
+    width: 97%;
+    /* height: 1.5cm; */
+  }
+  div.form-field-container {
+    margin-bottom: 16px;
+  }
+  
+  /* Additional styles for welcome container */
+  .welcome-container {
+    text-align: center; /* Center the content vertically */
+    padding: 2rem;
+  }
+  
+  .welcome-container h1 {
+    /* font-size: 24px; */
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 0%;
+  }
+  .welcome-container h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+    font-weight: lighter;
+  }
+ 
+
+
